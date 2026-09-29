@@ -1,5 +1,73 @@
+@font-face {
+    font-family: 'Modern Antiqua';
+    src: url('./assets/fonts/ModernAntiqua-Regular.woff2') format('woff2'),
+        url('./assets/fonts/ModernAntiqua-Regular.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Inter';
+    src: url('./assets/fonts/Inter-VariableFont.ttf') format('truetype'),
+        url('./assets/fonts/Inter-Regular.woff2') format('woff2');
+    font-weight: 100 900;
+    font-style: normal;
+    font-display: swap;
+}
+
+:root {
+    --theme-color: rgb(225, 255, 0);
+    --dark-theme-color: rgb(140, 160, 0);
+    --font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: var(--font-family);
+}
+
+
+body, .container {
+    background-color: black;
+    color: var(--theme-color, white);
+}
+
+.container {
+    height: 100vh;
+    display: grid;
+    grid-template-rows: 1fr 70% 1fr;
+}
+
+header {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 25px;
+    padding: 25px;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0 10%;
+    border-bottom: 1px solid white;
+}
+
+.site-title {
+    font-family: 'Modern Antiqua', var(--font-family);
+    font-size: 2.5rem;
+    text-align: center;
+}
+
+.new-book-btn {
+    padding: 10px;
+    border: none;
+    border-radius: 50px;
+    background-color: var(--theme-color);
+    font-weight: 800;
+    font-size: 1rem;
+    width: max-content;
+}
+
+.new-book-btn:focus-visible {
+    outline: 5px solid var(--dark-theme-color);
 }
