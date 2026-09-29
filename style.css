@@ -65,9 +65,13 @@ header {
     background-color: var(--theme-color);
     font-weight: 800;
     font-size: 1rem;
-    width: max-content;
+    transition-duration: 0.1s;
 }
 
 .new-book-btn:focus-visible {
     outline: 5px solid var(--dark-theme-color);
+}
+
+.new-book-btn:active {
+    background-color: var(--dark-theme-color);
 }
